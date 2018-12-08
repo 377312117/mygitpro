@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="console.log(createXhr())">获得返回值</button> -->
+    <div id='show'></div>
+    <button onclick="btnAjax()">Ajax</button>
+    <script>
+        function createXhr(){
+            var xhr =null;
+            if(window.XMLHttpRequest){
+                xhr = new XMLHttpRequest();
+            }else{
+                xhr = new ActiveXObject('Microsoft.XMLHTTP');
+            }
+            return xhr;
+            
+        }
+        function btnAjax(){
+            // 1.创建xhr
+            var xhr = createXhr();
+            // 2.创建请求
+            xhr.open('get','/server?uname=wangwc',true)
+            // 3.设置回调函数
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4&&xhr.status==200){
+                    document.getElementById('show').innerHTML=xhr.responseText
+                }
+            }
+            // 4.发送请求
+            xhr.send(null)
+        }
+    </script>
+</body>
+</html>

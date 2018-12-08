@@ -1,0 +1,24 @@
+h1{
+    font:18px '微软雅黑';
+    background: rgb(185, 31, 31);
+    color: rgb(57, 158, 74);
+}
+
+
+/* 作业 
+创建项目 Blog
+搭建基本结构
+    static
+    templates
+    run.py
+搭建Blog程序
+    将xx.html copy 进 templates中
+    将图片/css/js copy进 static 中
+配置好模板对静态文件的引用操作
+    将路径都更改为静态路径
+http://localhost:5000/
+    能够显示index.html中的内容
+
+
+
+*/

@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+
+	<title>住房位置信息查询系统登录界面</title>
+	<link rel="icon" href="/static/images/logo.ico" type="images/x-ico"/>
+	<!-- Meta-Tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //Meta-Tags -->
+
+	<!-- Style --> <link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all">
+
+	<style>
+	::-webkit-input-placeholder{
+		color:rgb(255, 255, 255);
+		opacity: 0.4;
+	
+	}
+	</style>
+
+</head>
+<!-- //Head -->
+
+<!-- Body -->
+<body>
+
+	<h1>欢迎登录/注册</h1>
+
+	<div class="container w3layouts agileits">
+
+		<div class="login w3layouts agileits">
+			<h2>登 录</h2>
+			<form action="/login" method="POST">
+				<input type="text" Name="Username" placeholder="手机号" 
+				onfocus='this.placeholder=""' onblur='this.placeholder="手机号"' required="">
+				<input type="password" Name="Password" placeholder="密码(不少于6位,不可包含'/'或者空格等特殊字符)" 
+				onfocus='this.placeholder=""' onblur='this.placeholder="密码(不少于6位,不可包含/或者空格等特殊字符)"' required="">
+			
+			<ul class="tick w3layouts agileits">
+				<li>
+					<input type="checkbox" id="brand1" value="">
+					<label for="brand1"><span></span>记住我</label>
+				</li>
+			</ul>
+			<div class="send-button w3layouts agileits">
+					<input type="submit" value="登 录">
+			</div>
+			</form>
+			<a href="#">记住密码?</a>
+			<!-- <div class="social-icons w3layouts agileits">
+				<p>- 其他方式登录 -</p>
+				<ul>
+					<li class="qq"><a href="#">
+					<span class="icons w3layouts agileits"></span>
+					<span class="text w3layouts agileits">QQ</span></a></li>
+					<li class="weixin w3ls"><a href="#">
+					<span class="icons w3layouts"></span>
+					<span class="text w3layouts agileits">微信</span></a></li>
+					<li class="weibo aits"><a href="#">
+					<span class="icons agileits"></span>
+					<span class="text w3layouts agileits">微博</span></a></li>
+					<div class="clear"> </div>
+				</ul>
+			</div> -->
+			<div class="clear"></div>
+		</div>
+		
+
+		<div class="register w3layouts agileits">
+			<h2>注 册</h2>
+			<form action="#" method="post">
+				<input type="text" Name="Phone Number" 
+				placeholder="手机号码(登录用户名)"  onfocus='this.placeholder=""' onblur='this.placeholder="手机号码(登录用户名)"' required="">
+				<input type="text" Name="yanzhengma" 
+				placeholder="6位验证码"  onfocus='this.placeholder=""' onblur='this.placeholder="6位验证码"' required="">
+				<input type="text" Name="Name" placeholder="用户昵称" 
+				onfocus='this.placeholder=""' onblur='this.placeholder="用户昵称"' required="">
+				<input type="text" Name="Email" placeholder="邮箱" 
+				onfocus='this.placeholder=""' onblur='this.placeholder="邮箱"' required="">
+				<input type="password" Name="Password" placeholder="密码(不少于6位,不可包含/或者空格等特殊字符)" 
+				onfocus='this.placeholder=""' onblur='this.placeholder="密码(不少于6位,不可包含/或者空格等特殊字符)"'  required="">
+				<input type="password" Name="Password" 
+				placeholder="请重新输入密码(与密码一致)" onfocus='this.placeholder=""' onblur='this.placeholder="请重新输入密码(与密码一致)"'  required="">
+				
+			</form>
+			<div class="send-button w3layouts agileits">
+				<form>
+					<input type="submit" value="免费注册">
+				</form>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="clear"></div>
+
+	</div>
+
+	<div class="footer w3layouts agileits">
+		<p>Copyright &copy; Engineering team of BUG</p>
+	</div>
+<div style="text-align:center;">
+
+</div>
+
+</body>
+<!-- //Body -->
+
+</html>

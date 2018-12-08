@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" width='400'>
+        <tr>
+            <th>id号</th>
+            <th>课程名</th>
+        </tr>
+        {% for c in darams['courses']%}
+        
+        <tr>
+            <td>{{c.id}}</td>
+            <td>{{c.cname}}</td>
+            <td>
+            <a href="/09-select?id={{c.id}}">查询班级下所有老师</a>
+           
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h3>
+        新增数据
+    </h3>
+    <form action="/07-insertviews" method="POST">
+        <p>
+            姓名:<input type="text" name='cname' value="">
+        </p>
+        <p>
+            <input type="submit" value="新增">
+        </p>
+    </form>
+</body>
+
+</html>

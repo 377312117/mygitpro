@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #email {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" width='400'>
+        <tr>
+            <th>姓名</th>
+            <th>密码</th>
+            <th>年龄</th>
+            <th>邮箱</th>
+            <th>操作</th>
+        </tr>
+        {% for u in darams['users']%}
+        {% if u.isActive == True %}
+        <tr>
+            <td>{{u.name}}</td>
+            <td>{{u._password}}</td>
+            <td>{{u.age}}</td>
+            <td>{{u.email}}</td>
+            <td>
+                <a href="/05-update?id={{u.id}}">修改</a>
+                <a href="/06-delete?id={{u.id}}">删除</a>
+            </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </table>
+    <h3>
+        新增数据
+    </h3>
+    <form action="/04-queryall" method="POST">
+        <p>
+            姓名:<input type="text" name='uname' value="">
+        </p>
+        <p>
+            密码:<input type="password" name='upassword' value="">
+        </p>
+        <p>
+            年龄:<input type="number" name='uage' value="">
+        </p>
+        <p>
+            邮箱:<input type="email" name='uemail' value="">
+        </p>
+        <p>
+            <input type="submit" value="新增">
+        </p>
+    </form>
+</body>
+
+</html>

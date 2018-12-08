@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #id {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/05-update" method="POST">
+
+        <p>
+            姓名:<input type="text" name='uname' value="{{user.name}}">
+        </p>
+        <p>
+            年龄:<input type="number" name='uage' value="{{user.age}}">
+        </p>
+        <p>
+            邮箱:<input type="email" name='uemail' value="{{user.email}}">
+        </p>
+
+        <p>
+            <input type="submit" value="修改">
+        </p>
+        <p id='id'>
+            id:<input type="number" name='uid' value="{{user.id}}">
+        </p>
+    </form>
+</body>
+
+</html>

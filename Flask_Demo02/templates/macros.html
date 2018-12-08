@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+    {% macro show_li(str) %}
+        <li>
+            {{str}}
+        </li>
+    {% endmacro %}
+
+    {% macro show_p(str) %}
+        <p style="font-weight:700;font-size:18px;color:red;">
+            {{str}}
+        </p>
+    {% endmacro %}
+</body>
+</html>

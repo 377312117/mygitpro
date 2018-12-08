@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" width='400'>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>生日</th>
+            <th>所属课程</th>
+        </tr>
+        {% for u in darams['teachers']%}
+        <tr>
+            <td>{{u.tname}}</td>
+            <td>{{u.tage}}</td>
+            <td>{{u.tbirth}}</td>
+            <td>{{u.c_id}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h3>
+        新增数据
+    </h3>
+    <form action="/08-regteacher" method="POST">
+        <p>
+            姓名:<input type="text" name='tname' value="">
+        </p>
+        <p>
+            年龄:<input type="number" name='tage' value="">
+        </p>
+        <p>
+            生日:<input type="date" name='tbirth' value="">
+        </p>
+        <p>
+            课程:<input type="number" name='c_id' value="">
+        </p>
+        <p>
+            <input type="submit" value="新增">
+        </p>
+    </form>
+</body>
+
+</html>

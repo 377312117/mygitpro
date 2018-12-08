@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 方法3 使用button+js传递 -->
+    <button onclick="btnClick()">连接到05-get</button>
+    <script>
+        function btnClick(){
+            location.href='/05-get?uname=TeacherWang&upwd=123456'
+        }
+    </script>
+    <!-- 方法2 超链接传递 -->
+    <h2>
+        <a href="/05-get?uname=rapwang&upwd=tarenawc">超链接传参</a>
+    </h2>
+    <!-- 方法1表单传递 -->
+    <form action="/05-get" method="POST">
+        <input type="text" name="uname" id=""><br>
+        <input type="password" name="upwd" id=""><br>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

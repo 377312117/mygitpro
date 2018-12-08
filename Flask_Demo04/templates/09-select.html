@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #id {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" width='400'>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>邮箱</th>
+            <th>操作</th>
+        </tr>
+        {% for u in params['teachers']%}
+        <tr>
+            <td>{{u.tname}}</td>
+            <td>{{u.tage}}</td>
+            <td>{{u.tbirth}}</td>
+            <td>
+                <a href="/05-update?id={{u.id}}">修改</a>
+                <a href="/06-delete?id={{u.id}}">删除</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

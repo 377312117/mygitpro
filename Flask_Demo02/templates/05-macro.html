@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 声明宏:接收一个字符串作为参数,将参数放p中打印输出 -->
+    {% macro showP(str) %}
+        <h3>使用宏显示的内容:</h3>
+        <p>{{str}}</p>
+    {% endmacro %}
+
+    <!-- 使用宏 -->
+    {% for name in params.list %}
+        {{showP(name)}}
+    {% endfor%}
+
+    <!-- 引入外部宏 -->
+    {% import 'macros.html'as ms %}
+    {% for name in params.list %}
+    {{ms.show_p(name)}}
+    {% endfor %}
+</body>
+</html>

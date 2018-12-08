@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style>
+        .c1{
+            background: red;
+        }
+        .c2{
+            background: orange;
+        }
+        .c3{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>循环遍历 list中每个元素</h1>
+    <ul>
+        {% for name in params.list %}
+            <li>
+                <h2>{{name}}</h2>
+                <H2>=====================</H2>
+                <h2>
+                    当前循环次数:{{loop.index}}</br>
+                    当前循环次数,0开始:{{loop.index0}}</br>
+                    是否为第一次循环:{{loop.first}}</br>
+                    是否为最后一次循环:{{loop.last}}</br>
+                </h2>
+            </li>
+        {% endfor %}
+    </ul>
+    <!-- 如果是第一次循环,背景改为red色 -->
+    <!-- 最后一次,背景色改为orange颜色 -->
+    <!-- 否则改为pink色 -->
+    <ul>
+        <h1>循环从字典中取key</h1>
+        {% for key,value in params.dic.items() %}
+        <li>
+            <!-- 会先解析{}中的内容使用服务器进行解析,然后解析完成再交给浏览器 -->
+            <h2 class="
+                {% if loop.first %}
+                    c1
+                {% elif loop.last %}
+                    c2
+                {% else %}
+                    c3
+                {% endif %}"
+            >{{key}}:{{value}}</h2>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

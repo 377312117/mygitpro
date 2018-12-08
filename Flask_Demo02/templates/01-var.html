@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>姓名:{{params.name}}</h1>
+    <h1>年龄:{{params.age}}</h1>
+    <h1>工资:{{params.salary}}</h1>
+    <!-- 输出元组 -->
+    <h1>元组:{{params.tup}}</h1>
+    <!-- 索引也可以用.来代替[] -->
+    <h1>元组第一个元素:{{params.tup.0}}</h1>
+    <!-- 输出列表 -->
+    <h1>列表:{{params.list}}</h1>
+    <!-- 输出字典 -->
+    <h1>字典:{{params.dic}}</h1>
+    <!-- 输出对象 -->
+    <h1>对象:{{params.dog}}</h1>
+    <!-- 对象的属性 -->
+    <h1>对象的属性:{{params.dog.name}}</h1>
+    <h1>对象的方法:{{params.dog.eat()}}</h1>
+</body>
+</html>
